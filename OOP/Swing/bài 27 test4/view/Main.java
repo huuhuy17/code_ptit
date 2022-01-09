@@ -525,7 +525,11 @@ public class Main extends javax.swing.JFrame {
     private void btnTimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTimActionPerformed
         String key = timKiemText.getText().trim().toLowerCase();
         List<LoaiVe> list = new ArrayList<>();
-        lVe.stream().filter(new PredicateImpl(key)).forEachOrdered(list::add);
+        for(LoaiVe i : lVe){
+            if(i.getLoai().toLowerCase().contains(key)){
+                list.add(i);  
+            }
+        }
         showVe(list);
     }//GEN-LAST:event_btnTimActionPerformed
 
