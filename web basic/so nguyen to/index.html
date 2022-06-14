@@ -1,0 +1,61 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <div id="ip">
+            <label for="input">nhập số đầu vào</label>
+            <input type="text" id="input" name="input">
+        </div>
+        <button onclick="getResult()">số nguyên tố lớn nhất là</button>
+        <div id="ip">
+            <label for="input">kết quả là: </label>
+            <div id="kq"></div>
+        </div>
+    </div>
+    <script>
+        function nt(n) {
+            for (let i = n - 1; i >= 2; i--) {
+                var flag = true;
+
+                if (i < 2) {
+                    flag = false;
+                }
+                else if (i == 2) {
+                    flag = true;
+                }
+                else if (i % 2 == 0) {
+                    flag = false;
+                }
+                else {
+                    for (var j = 3; i < Math.sqrt(n); j += 2) {
+                        if (i % i == 0) {
+                            flag = false;
+                            break;
+                        }
+                    }
+                }
+                if (flag == true) {
+                    return i;
+                }
+            }
+
+        }
+        function getResult() {
+            var n = document.getElementById("input").value;
+            console.log(nt(n));
+            var kq = document.getElementById("kq");
+            var result = nt(n);
+            kq.innerHTML = result;
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+
+html {
+  --color-border: #bcbfc2;
+  --btn-active: #bcbfc2;
+}
+
+#ketqua {
+  padding: .5rem 1rem 0rem;
+  text-align: right;
+  height: 40px;
+  font-size: 1.8rem;
+  background: var(--bg);
+  white-space: nowrap;
+  border:1px black solid; 
+}
+
+.container-grid {
+  padding: 5rem 0;
+  max-width: 300px;
+  width: 100%;
+  display: grid;
+  grid-template-rows: .5fr 1fr 5fr;
+}
+
+.maytinh {
+  border-top: 1px solid var(--color-border);
+  display: grid;
+  grid-template-columns: 2fr 1.5fr;
+}
+
+.so {
+  background: var(--bg);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);   
+}
+
+
+.phim {
+  border:1px rgb(211, 27, 27) solid; 
+  width: 100%;
+  font-size: 24px;
+  background: var(--bg);
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.phim:hover {
+  border: 1px #81aedb solid;
+  background-color: #81aedb;
+}
+
+

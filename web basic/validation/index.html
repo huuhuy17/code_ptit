@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+    <link id="link" rel="stylesheet" href="layout1.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <label for="femail">Email:</label>
+    <input type="text" id="femail" name="femail"><br><br>
+    <label for="lphone">SDT:</label>
+    <input type="text" id="lemail" name="lemail"><br><br>
+    <input type="submit" id="btn" value="Submit">
+    <script type="text/javascript">
+        function kiemTraEmail() {
+            var email = document.getElementById('femail');
+            var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            if (!filter.test(email.value)) {
+                alert('Email sai định dạng!');
+                email.focus;
+                return false;
+            }
+            else {
+                alert('OK');
+            }
+        }
+        var button = document.getElementById("btn");
+        button.onclick = function () {
+            kiemTraEmail();
+        }
+    </script>
+</body>
+
+</html>

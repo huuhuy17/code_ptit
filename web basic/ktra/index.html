@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <div>
+            <input type="text" placeholder="First name">
+            <input type="text" placeholder="Last name">
+        </div>
+        <div>
+            <input type="text" placeholder="Email">
+        </div>
+        <div>
+            <input type="text" placeholder="Reenter Email">
+        </div>
+        <div>
+            <input type="password" placeholder="Password" id="pass" value="Huuhuy23@#">
+        </div>
+        <div>
+            <input type="button" onclick="checkPass()" value="Sign up" id="">
+        </div>
+
+    </form>
+
+    <script>
+        var password = document.getElementById("pass").value;
+        console.log(password.length);
+
+
+        function checkPass() {
+            console.log(password);
+            var checklength = true;;
+            if (password.length < 8) {
+                check = true;
+            }
+            var check1 = false
+            for (let i in password) {
+                if (i === '@') {
+                    check1 = true;
+                    break;
+                }
+            }
+            var check2 = false
+            for (let i in password) {
+                if (i === '#') {
+                    check2 = true;
+                    break;
+                }
+            }
+
+            var check3 = false
+            for (let i in password) {
+                for (let j = 0; j <= 9; j++) {
+                    if (i === j) {
+                        check2 = true;
+                        break;
+                    }
+                }
+
+            }
+            console.log(check1, check2, check3, checklength);
+            if(check1 && check2 && check3 && checklength){
+                alert("Sucesss")
+            }
+        }
+    </script>
+</body>
+
+</html>
