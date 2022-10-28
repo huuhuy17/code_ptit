@@ -1,36 +1,24 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>Document</title>
-    <link id="link" rel="stylesheet" href="layout1.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Modal</title>
+  <link href="styles.css" rel="stylesheet">
+  <script defer src="script.js"></script>
 </head>
-
 <body>
-    <label for="femail">Email:</label>
-    <input type="text" id="femail" name="femail"><br><br>
-    <label for="lphone">SDT:</label>
-    <input type="text" id="lemail" name="lemail"><br><br>
-    <input type="submit" id="btn" value="Submit">
-    <script type="text/javascript">
-        function kiemTraEmail() {
-            var email = document.getElementById('femail');
-            var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-            if (!filter.test(email.value)) {
-                alert('Email sai định dạng!');
-                email.focus;
-                return false;
-            }
-            else {
-                alert('OK');
-            }
-        }
-        var button = document.getElementById("btn");
-        button.onclick = function () {
-            kiemTraEmail();
-        }
-    </script>
+  <button data-modal-target="#modal">Open Modal</button>
+  <div class="modal" id="modal">
+    <div class="modal-header">
+      <div class="title">Example Modal</div>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quod alias ut illo doloremque eum ipsum obcaecati distinctio debitis reiciendis quae quia soluta totam doloribus quos nesciunt necessitatibus, consectetur quisquam accusamus ex, dolorum, dicta vel? Nostrum voluptatem totam, molestiae rem at ad autem dolor ex aperiam. Amet assumenda eos architecto, dolor placeat deserunt voluptatibus tenetur sint officiis perferendis atque! Voluptatem maxime eius eum dolorem dolor exercitationem quis iusto totam! Repudiandae nobis nesciunt sequi iure! Eligendi, eius libero. Ex, repellat sapiente!
+    </div>
+  </div>
+  <div id="overlay"></div>
 </body>
-
 </html>
